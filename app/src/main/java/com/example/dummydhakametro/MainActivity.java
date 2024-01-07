@@ -1,6 +1,7 @@
 package com.example.dummydhakametro;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -99,8 +100,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                    ///Implementation of Dijkstra
-
                     Toast.makeText(MainActivity.this,"Stations List for min Distance from " + sourceStation + " to " + destinationStation,Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this,CalculateMinDist.class);
+                    intent.putExtra("Source",sourceStation);
+                    intent.putExtra("Destination",destinationStation);
+                    startActivity(intent);
                 }
             }
         });
@@ -118,6 +122,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 }
