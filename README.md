@@ -9,4 +9,6 @@ Here i assume that all station of dhaka metro are working and use some famous da
 problem. I developed the appliction in android studio with java programming language.
 
 # Interface
+<p align = 'center'>
 ![alt text](https://github.com/Sakil-JU-CSE-28/DummyDhakaMetro/blob/master/app/src/main/res/drawable/firstpage.jpg?raw=true)
+</p>
