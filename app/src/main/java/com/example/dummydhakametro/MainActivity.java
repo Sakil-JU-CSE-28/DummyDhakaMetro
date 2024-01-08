@@ -29,6 +29,7 @@ import java.util.Vector;
 public class MainActivity extends AppCompatActivity {
     Set<String> stations;
     String sourceStation,destinationStation;
+    private StationDbHelper dbHelper;
     Button minDistBtn,minCostBtn;
     AutoCompleteTextView autoCompleteTextView,autoCompleteTextView1;
     ArrayAdapter<String>adapterStation,adapterStation1;
@@ -51,9 +52,11 @@ public class MainActivity extends AppCompatActivity {
             }
             stations.add(cur);
         }
-
+        dbHelper = new StationDbHelper(this);
         scanner.close();
-
+        for (String station : stations) {
+            dbHelper.addStation(station);
+        }
     }
 
     @SuppressLint("MissingInflatedId")
@@ -104,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this,CalculateMinDist.class);
                     intent.putExtra("Source",sourceStation);
                     intent.putExtra("Destination",destinationStation);
+                    intent.putExtra("Token","Token1");
                     startActivity(intent);
                 }
             }
@@ -117,8 +121,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     ///Implementation of Dijkstra
-
                     Toast.makeText(MainActivity.this,"Stations List for min Cost from " + sourceStation + " to " + destinationStation,Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this,CalculateMinDist.class);
+                    intent.putExtra("Source",sourceStation);
+                    intent.putExtra("Destination",destinationStation);
+                    intent.putExtra("Token","Token2");
+                    startActivity(intent);
                 }
             }
         });

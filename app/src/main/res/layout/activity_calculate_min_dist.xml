@@ -4,18 +4,15 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <!-- First TextView -->
-    <TextView
-        android:id="@+id/tv1"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello" />
+        android:layout_height="match_parent" />
 
-    <!-- Second TextView -->
     <TextView
-        android:id="@+id/tv2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello" />
+        android:layout_height="match_parent"
+        android:id="@+id/tv"
+        />
 
 </LinearLayout>
