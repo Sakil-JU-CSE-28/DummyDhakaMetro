@@ -10,5 +10,5 @@ problem. I developed the appliction in android studio with java programming lang
 
 # Interface
 <p align = 'center'>
-<img src = "https://github.com/Sakil-JU-CSE-28/DummyDhakaMetro/blob/master/app/src/main/res/drawable/firstpage.jpg" title = "First Page">
+<img src = "https://github.com/Sakil-JU-CSE-28/DummyDhakaMetro/blob/master/app/src/main/res/drawable/firstpage.jpg">
 </p>
